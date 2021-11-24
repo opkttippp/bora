@@ -1,0 +1,196 @@
+body{
+    background-image: url("images/fon_2.jpg");
+}
+#container{
+    position: relative;
+    min-width: 1024px;
+    margin: auto auto;
+    text-align: center;
+    width: 100%;
+    height: 800px;
+    /*border: 2px solid red;*/
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1;
+    background: #343a40;
+    color: papayawhip;
+    font-size: 14px;
+    width: 100%;
+    height: 90px;
+}
+.navbar{
+    height: 45px;
+}
+.navbar a{
+    padding-left: 100px;
+}
+.container-home{
+    position:relative;
+    top: 100px;
+    left: 160px;
+    width: 90%;
+    height: 600px;
+    padding: 10px;
+    color: papayawhip;
+    /*border: 2px solid red;*/
+}
+.img-home{
+    position:relative;
+    top: 10px;
+    width: 85%;
+    height: auto;
+}
+.img-home img{
+    position:relative;
+    top: 10px;
+    left: 10px;
+    margin-left: 10px;
+}
+.home-text {
+    position: relative;
+    top: 50px;
+    width: 80%;
+    font-size: 14px;
+    z-index: 0;
+
+}
+.sidenav {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    /*height: 800px;*/
+    height: 100%;
+    width: 150px;
+    z-index: 1;
+    background-image: url("images/said_fon.jpeg");
+}
+.side{
+    padding-top: 100px;
+}
+.sidenav a {
+    padding: 10px 10px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: teal;
+    display: block;
+}
+.sidenav a:hover {
+     color: #f1f1f1;
+ }
+.collapse ul{
+    padding-left: 220px;
+}
+
+/*--------goods---------*/
+.container-list{
+    position:relative;
+    float: left;
+    width: 300px;
+    margin-top: 20px;
+}
+/*-----description-----*/
+.big-img{
+    position:absolute;
+    top: 50px;
+    left: 10px;
+    width: 40%;
+    float: left;
+}
+.small-img{
+    position:absolute;
+    top: 30px;
+    left: 450px;
+    margin: 20px;
+    width: 41%;
+    height: 150px;
+}
+.small-img img{
+    margin: 10px;
+}
+.text{
+    position:relative;
+    top: 230px;
+    left: 520px;
+    width: 41%;
+    height: 150px;
+}
+.buy{
+    position: absolute;
+    top: 400px;
+    left: 10px;
+    width: 80%;
+}
+/*------button------*/
+input.button4 {
+    position: relative;
+    display: inline-block;
+    font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgb(245,245,245);
+    text-shadow: 0 -1px rgba(0,0,0,.1);
+    text-decoration: none;
+    user-select: none;
+    padding: .3em 1em;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: #0c9c0d linear-gradient(#82d18d, #0c9c0d);
+    box-shadow: inset #72de26 0 -1px 1px, inset 0 1px 1px #98ff98, #3caa3c 0 0 0 1px, rgba(0,0,0,.3) 0 2px 5px;
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+input.button4:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    cursor: pointer;
+}
+input.button4:active {
+    top: 1px;
+    color: #fff;
+    text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
+}
+@-webkit-keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+@keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+/*------------------*/
+.login{
+    width: 200px;
+    color: bisque;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+.container h1{
+    text-align: center;
+    padding: 10px;
+}
+.container-list a{
+    text-align: center;
+    text-decoration: none;
+}
+.container-basket{
+    position: relative;
+    top: 100px;
+    left: 100px;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+}
+.footer{
+    height: 45px;
+    background: #343a40;
+    font-size: 14px;
+    text-align: center;
+}
+.text-muted{
+    margin: 0 auto;
+}
