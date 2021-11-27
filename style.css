@@ -84,7 +84,6 @@ body{
 .collapse ul{
     padding-left: 220px;
 }
-
 /*--------goods---------*/
 .container-list{
     position:relative;
@@ -105,7 +104,7 @@ body{
     top: 30px;
     left: 450px;
     margin: 20px;
-    width: 41%;
+    min-width: 41%;
     height: 150px;
 }
 .small-img img{
@@ -113,10 +112,26 @@ body{
 }
 .text{
     position:relative;
-    top: 230px;
-    left: 520px;
-    width: 41%;
+    top: 200px;
+    left: 500px;
+    min-width: 41%;
     height: 150px;
+}
+.card-img{
+    /*position: relative;*/
+    /*top: 38px;*/
+    /*left: 10px;*/
+    /*border: 2px solid red;*/
+    max-width: 19%;
+    margin-left: 40px;
+}
+.count{
+    position:absolute;
+    top: 200px;
+    left: 550px;
+    width: 200px;
+    color: aqua;
+    /*border: 2px solid red;*/
 }
 .buy{
     position: absolute;

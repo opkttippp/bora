@@ -20,16 +20,16 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/index.php">Home</a>
+                  <a class="nav-link active" aria-current="page" href="?page=home">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="goods.html">Товары</a>
+                  <a class="nav-link" href="?page=goods">Товары</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="card.html">Корзина</a>
+                  <a class="nav-link" href="?page=card">Корзина</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="login.html">Log in</a>
+                  <a class="nav-link" href="?page=login">Log in</a>
                 </li>
               </ul>
               <form class="d-flex">
@@ -49,35 +49,6 @@
             <a href="#Контакты">Contact</a>
           </div>
         </div>
-        <div class="container-home">
-          <h3>Ноутбук ASUS Laptop X515EP-BQ317</h3>
-          <div class="big-img">
-            <img src="/images/201.jpg" width="420" height="320" alt="ноутбук">
-          </div>
-          <div class="small-img">
-            <img src="/images/202.jpg" width="170" height="120" alt="ноутбук">
-            <img src="/images/203.jpg" width="170" height="120" alt="ноутбук">
-          </div>
-          <div class="text">
-            <p>Экран 14" (1366x768) WXGA HD, матовый / Intel Core i3-10110U (2.1 - 4.1 ГГц) /
-              RAM 4 ГБ / SSD 256 ГБ / Intel UHD Graphics / без ОД / Wi-Fi / Bluetooth /
-              веб-камера / без ОС / 1.6 кг / серый
-            </p>
-          </div>
-          <div class="buy">
-            <input type="button" class="button4" value="Купить">
-          </div>
-        </div>
-      </main>
-      <footer class="footer mt-auto py-3 fixed-bottom">
-        <div class="footer">
-          <span class="text-muted">Footer</span>
-        </div>
-      </footer>
-    </div>
-  </body>
-</html>
-
 
 
 
