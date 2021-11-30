@@ -1,16 +1,20 @@
 <?php
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//echo phpinfo();
+spl_autoload_register(function ($class) {
+    $path = str_replace('\\', '/', $class);
+    $path .= '.php';
+    if (file_exists($path)) {
+        include $path;
+    }
+});
 
 $layout = "public/view/block/layout.php";
-$params = $_GET['id'];
+$params = $_GET;
 $template = $_GET['page'];
-function render($layout, $template = null, $params = null)
-{
-        $sourse = $template.".php";
-    echo $content = "public/view/pages/".$sourse;
-    echo "<br>";
-    include_once  $layout;
-}
-render($layout,$template, $params);
 
+$s = new render();
+$s->rend($layout, $template, $params);
 
 
