@@ -51,9 +51,9 @@
         </div>
         <div class="container-home">
           <div class="img-home">
-            <img src="/images/old_1.jpeg" width="240" height="180" alt="ноутбук">
-            <img src="/images/old_2.jpg" width="240" height="180" alt="ноутбук">
-            <img src="/images/not_1.jpg" width="240" height="180" alt="ноутбук">
+            <img src="/public/images/old_1.jpeg" width="240" height="180" alt="ноутбук">
+            <img src="/public/images/old_2.jpg" width="240" height="180" alt="ноутбук">
+            <img src="/public/images/not_1.jpg" width="240" height="180" alt="ноутбук">
           </div>
           <div class="home-text">
             <h1>My first laptop</h1>
