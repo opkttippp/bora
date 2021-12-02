@@ -1,16 +1,6 @@
 <?php
-session_id('1980');
-session_name('PHPSESSID');
-session_start();
-if($_GET['action']=='logout'){
-    $s = new sess();
-    $s->del();
-//    header("Location:/?page=login");
-}
-if ($_SESSION['login']) {
-    $login = $_SESSION['login'];
-    $s = new sess();
-    $s->val($login);
+if (isset($_SESSION['login'])) {
+    $login = $_SESSION['login'] ?? '';
 }
 ?>
 <!doctype html>
@@ -20,11 +10,12 @@ if ($_SESSION['login']) {
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><?=$params['page']?></title>
-  <link rel="stylesheet" href="/style.css">
+  <title><?= $title ?></title>
+  <link href="/style/style.css" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
         crossorigin="anonymous">
+  <!--  <script src="/../vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>-->
 </head>
 <body>
 <div id="container">
@@ -35,31 +26,32 @@ if ($_SESSION['login']) {
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li>
-              <a class="nav-link active" aria-current="page" href="?page=home">Home</a>
+              <a class="nav-link active" aria-current="page" href="/home/index">Home</a>
             </li>
             <li>
-              <a class="nav-link" href="?page=goods">Товары</a>
+              <a class="nav-link" href="/goods/show">Товары</a>
             </li>
             <li>
-              <a class="nav-link" href="?page=card">Корзина</a>
+              <a class="nav-link" href="/cart/show">Корзина</a>
             </li>
               <?php
-              if (!isset($login)){
+              if (empty($login)) {
                   echo
-                '<li>
-                  <a class="nav-link" href="?page=login">Log in</a>
-                </li>';}
-              else
-              echo "
+                  '<li>
+                  <a class="nav-link" href="/user/login">Log in</a>
+                </li>';
+              } else {
+                  echo "
                 <li>
-                  <a class='nav-link' href='?action=logout'>Выход</a>
+                  <a class='nav-link' href='/user/logout'>Выход</a>
                 </li>
               <li>
-                <a class='nav-link' href='?page=admin'>
-                <img src='/public/images/user.jpg' width='20' height='20' alt='user'>
+                <a class='nav-link' href='/user/index'>
+                <img src='/images/user.jpg' width='20' height='20' alt='user'>
                 </a>
-              </li>"
-                ?>
+              </li>";
+              }
+              ?>
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

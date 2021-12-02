@@ -1,1 +1,223 @@
-style.css
+body{
+    background-image: url("../images/fon_2.jpg");
+    background-color: #343a40;
+}
+#container{
+    position: relative;
+    width: 100%;
+    margin: auto auto;
+    text-align: center;
+    height: 100%;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1;
+    background: #343a40;
+    color: papayawhip;
+    font-size: 14px;
+    width: 100%;
+    height: 90px;
+}
+.navbar{
+    height: 45px;
+}
+.navbar a{
+    padding-left: 100px;
+}
+.container-home{
+    position:relative;
+    top: 200px;
+    width: 86%;
+    margin-left: 14%;
+    height: 100%;
+    color: papayawhip;
+    /*border: 2px solid red;*/
+}
+.img-home{
+    position:relative;
+    top: 20%;
+    width: 100%;
+    height: 35%;
+}
+.img-home img{
+    margin: 15px;
+}
+.home-text {
+    position: relative;
+    top: 50px;
+    width: 100%;
+    font-size: 14px;
+    z-index: 0;
+}
+.home-text h1{
+    /*background-color: teal;*/
+    /*color: darkmagenta;*/
+}
+.sidenav {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    height: 100%;
+    width: 14%;
+    z-index: 1;
+    background-image: url("../images/said_fon.jpeg");
+}
+.side{
+    padding-top: 100px;
+}
+.sidenav a {
+    padding: 10px 10px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: teal;
+    display: block;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.collapse ul{
+    padding-left: 220px;
+}
+/*--------goods---------*/
+.container-list{
+    position:relative;
+    float: left;
+    width: 300px;
+    margin: 20px;
+}
+.container-list a{
+    text-align: center;
+    text-decoration: none;
+}
+/*-----description-----*/
+.big-img{
+    position: relative;
+    float: left;
+    margin: 20px;
+}
+.small-img{
+    margin: 20px;
+    min-width: 41%;
+    height: 150px;
+}
+.small-img img{
+    margin: 10px;
+}
+.text{
+    margin: 20px;
+    min-width: 41%;
+}
+.card-img{
+    max-width: 19%;
+    margin-left: 40px;
+}
+.count{
+    position: absolute;
+    top: 400px;
+    left: 150px;
+    min-width: 41%;
+    font-size: 18px;
+    color: aqua;
+    margin: auto 20px;
+    /*border: 2px solid red;*/
+}
+.count p{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.buy{
+    position: relative;
+    top: 50px;
+}
+/*------button------*/
+input.button4 {
+    position: relative;
+    display: inline-block;
+    font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: rgb(245,245,245);
+    text-shadow: 0 -1px rgba(0,0,0,.1);
+    text-decoration: none;
+    user-select: none;
+    padding: .3em 1em;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: #0c9c0d linear-gradient(#82d18d, #0c9c0d);
+    box-shadow: inset #72de26 0 -1px 1px, inset 0 1px 1px #98ff98, #3caa3c 0 0 0 1px, rgba(0,0,0,.3) 0 2px 5px;
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+input.button4:hover {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    cursor: pointer;
+}
+input.button4:active {
+    top: 1px;
+    color: #fff;
+    text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
+}
+@-webkit-keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+@keyframes pulsate {
+    50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
+}
+/*------------------*/
+.login{
+    position: relative;
+    top: 20%;
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    color: bisque;
+}
+.container h1{
+    text-align: center;
+    padding: 10px;
+}
+.container-basket{
+    position: relative;
+    top: 25%;
+}
+.footer{
+    height: 45px;
+    background: #343a40;
+    font-size: 14px;
+    text-align: center;
+}
+.order{
+    position: relative;
+    top: 25%;
+    width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+    border: papayawhip 2px solid;
+}
+.order img{
+    margin-right: 50px;
+}
+.cont_1{
+    margin-left: 0;
+    width: 90%;
+    height: 10%;
+}
+.cont_2{
+    margin-left: 0;
+    width: 45%;
+    height: 80%;
+    float: left;
+}
+.cont_3{
+    position: relative;
+    margin-left: 0;
+    width: 45%;
+    height: 80%;
+    float: left;
+}

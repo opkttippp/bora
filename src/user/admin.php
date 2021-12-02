@@ -2,5 +2,5 @@
 return $user = [
     'id' => '1',
     'login' => 'admin',
-    'Pass' => '12345'
+    'pass' => '12345'
     ];
