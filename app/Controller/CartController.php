@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Core\Controller;
+use Framework\Core\Controller;
 
 class CartController extends Controller
 {

@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-use App\lib\Db;
+use Framework\lib\Db;
 use PDO;
 
 class Goods
