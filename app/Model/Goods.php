@@ -2,10 +2,16 @@
 
 namespace App\Model;
 
+use App\lib\Db;
+use PDO;
+
 class Goods
 {
     public function getProduct()
     {
-        return include_once "../src/model/list.php";
+        $db = new Db();
+
+        $res = $db->db->query('SELECT * FROM product LEFT JOIN image ON product.id=image.product_id');
+        return $res->fetchAll(PDO::FETCH_ASSOC);
     }
 }

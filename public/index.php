@@ -1,10 +1,16 @@
 <?php
 session_start();
-//include "../Error.php";
+//ini_set('log_errors', TRUE);
+//ini_set('error_log', 'logs/php_errors.log');
+//ini_set('error_reporting', E_ALL);
 
 use App\Core\Router;
 
+
 require "../vendor/autoload.php";
+
+$logger = new App\Mylogger();
+$logger->log();
 
 //spl_autoload_register(function ($class) {
 //    $path = str_replace('\\', '/', $class);
@@ -18,7 +24,7 @@ require "../vendor/autoload.php";
 
 try {
     $router = new Router($_SERVER['REQUEST_URI']);
-    $router->run();
+    $router->run(4);
 
     $controller = $router->controller;
     $action = $router->action;
@@ -26,8 +32,9 @@ try {
 
     $cont = new $router->cont($controller, $action, $get);
     $cont->$action();
+
 } catch (Exception $error) {
-    echo 123;
+    echo "Exception - $error";
 }
 //} catch (FrameworkException $error) {
 //}

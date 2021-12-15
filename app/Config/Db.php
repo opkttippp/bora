@@ -1,7 +1,7 @@
 <?php
 return [
     'host' => 'localhost',
-    'name' => 'BASE',
+    'name' => 'Bora_db',
     'user' => 'tttolll',
     'password' => 'tttolll'
 ];
