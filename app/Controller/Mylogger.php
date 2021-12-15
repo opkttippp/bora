@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Controller;
 
 use Monolog\ErrorHandler;
 use Monolog\Formatter\JsonFormatter;

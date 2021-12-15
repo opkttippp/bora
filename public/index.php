@@ -5,11 +5,12 @@ session_start();
 //ini_set('error_reporting', E_ALL);
 
 use App\Core\Router;
+use App\Controller\Mylogger;
 
 
 require "../vendor/autoload.php";
 
-$logger = new App\Mylogger();
+$logger = new Mylogger();
 $logger->log();
 
 //spl_autoload_register(function ($class) {
