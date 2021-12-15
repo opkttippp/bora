@@ -1,6 +1,6 @@
 <?php
-if (isset($_SESSION['login'])) {
-    $login = $_SESSION['login'] ?? '';
+if (isset($_SESSION['name'])) {
+    extract($_SESSION);
 }
 ?>
 <!doctype html>
@@ -36,10 +36,13 @@ if (isset($_SESSION['login'])) {
               <a class="nav-link" href="/cart/show">Корзина</a>
             </li>
               <?php
-              if (empty($login)) {
+              if (empty($name)) {
                   echo
                   '<li>
                   <a class="nav-link" href="/user/login">Log in</a>
+                </li>
+                  <li>
+                  <a class="nav-link" href="/user/reg">Sign up</a>
                 </li>';
               } else {
                   echo "

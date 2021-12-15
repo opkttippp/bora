@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use Monolog\ErrorHandler;
-use Monolog\Formatter\JsonFormatter;
+use Monolog\Formatter\LineFormatter;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Monolog\Processor\MemoryUsageProcessor;
@@ -12,10 +12,10 @@ use Monolog\Processor\WebProcessor;
 
 class Mylogger
 {
-    public function log()
+    public static function log()
     {
-        $handler = new StreamHandler("logs/errors.log", Logger::ERROR);
-        $handler->setFormatter(new JsonFormatter());
+        $handler = new StreamHandler("logs/errors.log", Logger::DEBUG);
+        $handler->setFormatter(new LineFormatter());
         $memoryProcessor = new MemoryUsageProcessor();
         $psrProcessor = new PsrLogMessageProcessor();
         $webProcessor = new WebProcessor();
@@ -25,8 +25,8 @@ class Mylogger
             $psrProcessor,
             $webProcessor,
         ]);
-
-        $logger->error('Error!');
+        $logger->debug('logger is ready');
         ErrorHandler::register($logger);
+        return $logger;
     }
 }

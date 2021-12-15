@@ -2,33 +2,35 @@
 
 namespace Framework\Core;
 
-use Exception;
-
 class Router
 {
-    public string $cont;
     public string $controller;
     public string $action;
-    private string $route;
     public string $get;
+    public string $url;
+    public string $route;
 
-    public const HOME = 'home/index';
-
-    public function __construct(string $route)
+    public function __construct()
     {
-        $this->route = $route;
-    }
+        $this->url = $_SERVER['REQUEST_URI'];
 
-    public function run()
-    {
-        if ($this->route === '/') {
-            $this->route .= self::HOME;
+        if ($this->url === '/') {
+            $this->url .= 'home/index';
         }
-        $matches = explode("/", $this->route);
+        $matches = explode("/", $this->url);
 
-        $this->cont = 'App\\Controller\\' . ucfirst($matches[1]) . 'Controller';
-        $this->controller = ucfirst($matches[1]);
-        $this->action = $matches[2] ?? '';
-        $this->get = $matches[3] ?? '';
+        $this->route = 'App\\Controller\\' . ucfirst($matches[1]) . 'Controller';
+
+        if (class_exists($this->route)) {
+            $this->controller = ucfirst($matches[1]);
+            if (method_exists($this->route, $matches[2])) {
+                $this->action = $matches[2];
+                $this->get = $matches[3] ?? '';
+            } else {
+                View::errorCode("нет метода ");
+            }
+            return $this;
+        }
+        View::errorCode("Нет контроллера ");
     }
 }

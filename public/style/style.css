@@ -32,9 +32,8 @@ body{
     top: 200px;
     width: 86%;
     margin-left: 14%;
-    height: 100%;
+    min-height: 600px;
     color: papayawhip;
-    /*border: 2px solid red;*/
 }
 .img-home{
     position:relative;
@@ -51,10 +50,6 @@ body{
     width: 100%;
     font-size: 14px;
     z-index: 0;
-}
-.home-text h1{
-    /*background-color: teal;*/
-    /*color: darkmagenta;*/
 }
 .sidenav {
     position: fixed;
@@ -115,22 +110,18 @@ body{
     margin-left: 40px;
 }
 .count{
-    position: absolute;
-    top: 400px;
-    left: 150px;
-    min-width: 41%;
+    position: relative;
+    top: 10px;
+    float: left;
     font-size: 18px;
     color: aqua;
-    margin: auto 20px;
-    /*border: 2px solid red;*/
-}
-.count p{
-    margin-top: auto;
-    margin-bottom: auto;
+    width: 90%;
 }
 .buy{
     position: relative;
-    top: 50px;
+    top: 10px;
+    width: 25%;
+    border: 2px solid;
 }
 /*------button------*/
 input.button4 {
@@ -172,8 +163,9 @@ input.button4:active {
 /*------------------*/
 .login{
     position: relative;
-    top: 20%;
+    top: 10%;
     width: 270px;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
     color: bisque;
@@ -198,7 +190,6 @@ input.button4:active {
     width: 48%;
     margin-left: auto;
     margin-right: auto;
-    border: papayawhip 2px solid;
 }
 .order img{
     margin-right: 50px;
@@ -211,13 +202,14 @@ input.button4:active {
 .cont_2{
     margin-left: 0;
     width: 45%;
-    height: 80%;
+    height: 330px;
     float: left;
 }
-.cont_3{
+.cont_3 {
     position: relative;
     margin-left: 0;
     width: 45%;
-    height: 80%;
+    height: 330px;
     float: left;
+    /*border: red 2px solid;*/
 }

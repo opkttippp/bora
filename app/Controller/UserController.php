@@ -10,9 +10,17 @@ class UserController extends Controller
     {
         if (!empty($_POST['login']) && !empty($_POST['pass'])) {
             $this->model->log($_POST['login'], $_POST['pass']);
-            header("Location:/user/index");
         }
         $this->view->render('login');
+    }
+
+    public function reg()
+    {
+        if (!empty($_POST['login']) && !empty($_POST['surname']) && !empty($_POST['pass']) && !empty($_POST['email'])) {
+            $this->model->reg($_POST['login'], $_POST['surname'], $_POST['pass'], $_POST['email']);
+
+        }
+        $this->view->render('reg');
     }
 
     public function index()
@@ -22,14 +30,7 @@ class UserController extends Controller
 
     public function logout()
     {
-        $this->del();
+        Sess::logout();
         header("Location:/user/login");
-    }
-
-    public function del()
-    {
-        session_unset();
-        unset($_SESSION);
-        session_destroy();
     }
 }

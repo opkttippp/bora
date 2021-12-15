@@ -2,38 +2,55 @@
 
 namespace App\Model;
 
+use Framework\lib\Db;
+use PDO;
+
 class User
 {
-    public function log($login, $pass)
+
+    public function log($login, $password)
     {
-        include_once "../src/user/admin.php";
-        if (isset($user)) {
-            if ($login == $user['login'] && $pass == $user['pass']) {
-                $_SESSION['login'] = $login;
-            }
+        $pass = password_hash($password, PASSWORD_DEFAULT);
+        $db = new Db();
+        $sql = "SELECT * FROM users WHERE name = :login";
+        $stat = $db->db->prepare($sql);
+        $stat->bindValue(":login", $login);
+        $stat->execute();
+        $query = $stat->fetch(PDO::FETCH_ASSOC);
+        if ((password_verify($password, $query['pass']))) {
+            $this->sess($query);
+            header("Location:/user/index");
+        } else {
             return false;
+        }
+    }
+
+    public function reg(): bool
+    {
+        $db = new Db();
+        $name = $_POST['login'];
+        $surname = $_POST['surname'];
+        $pass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+        $email = $_POST['email'];
+        unset($_POST);
+
+        $sql = "INSERT INTO users ( name, surname, pass, email) VALUES ( :name, :surname, :pass, :email)";
+        $stat = $db->db->prepare($sql);
+        $stat->bindValue(":name", $name);
+        $stat->bindValue(":surname", $surname);
+        $stat->bindValue(":pass", $pass);
+        $stat->bindValue(":email", $email);
+
+        if ($stat->execute()) {
+            header("Location:/user/login");
         }
         return false;
     }
-}
 
-//
-//    function del()
-//    {
-//        session_unset();
-//        session_destroy();
-//        header("Location:/home/index");
-//    }
-//
-//    function val($login)
-//    {
-//        if (!isset($_SESSION['time'])) {
-//            $_SESSION['user'] = $_SERVER['HTTP_USER_AGENT'];
-//            $_SESSION['remote'] = $_SERVER['REMOTE_ADDR'];
-//            $_SESSION['time'] = date("H:i:s");
-//        }
-//        if ((!isset($_SESSION['user']) || $_SESSION['user'] !== $_SERVER['HTTP_USER_AGENT'])
-//            || (!isset($_SESSION['remote']) || $_SESSION['remote'] !== $_SERVER['REMOTE_ADDR']))
-//            die('Ошибка подключения');
-//        return $login;
-//    }
+    public function sess($query)
+    {
+        foreach ($query as $key => $val) {
+            $_SESSION[$key] = $val;
+        }
+    }
+}
