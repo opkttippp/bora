@@ -17,6 +17,7 @@ if (isset($_SESSION['name'])) {
         rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
         crossorigin="anonymous">
   <!--  <script src="/../vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>-->
+  <script src="../style/style.js"></script>
 </head>
 <body>
 <div id="container">
