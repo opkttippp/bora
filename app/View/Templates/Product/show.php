@@ -1,8 +1,7 @@
 <div class="container-home">
     <?php
     if (isset($list)) {
-        foreach ($list as $val) {
-            extract($val); ?>
+            extract($list); ?>
   <div class="cont_1">
     <h3><?= $name ?></h3>
   </div>
@@ -25,11 +24,10 @@
       <p>Осталось - <?= $count ?> шт.</p>
     </div>
 
-    <form class="" action="/cart/buy/<?= $id ?>" method="post">
+    <form class="" action="/cart/show/<?= $id ?>" method="post">
       <input type="submit" class="button4" value="Купить">
     </form>
   </div>
 </div>
             <?php
-        }
     }

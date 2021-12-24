@@ -186,13 +186,26 @@ input.button4:active {
 }
 .order{
     position: relative;
-    top: 25%;
-    width: 48%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 50px;
 }
-.order img{
-    margin-right: 50px;
+.container-basket img{
+    float: left;
+    margin-left: 50px;
+}
+.name{
+    float: left;
+    margin: 15px;
+    width: 300px;
+}
+.number{
+    float: left;
+    margin: 15px;
+    width: 50px;
+}
+.price{
+    float: left;
+    width: 150px;
+    margin: 15px;
 }
 .cont_1{
     margin-left: 0;
