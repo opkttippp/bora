@@ -1,6 +1,6 @@
 <?php
 
-ini_set('error_reporting', E_CORE_ERROR);
+ini_set('error_reporting', E_ALL);
 
 use Framework\Core\Router;
 use App\Controller\Mylogger;

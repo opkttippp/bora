@@ -11,6 +11,6 @@ class Goods
     public function getProduct()
     {
         $db = new Db();
-        return $db->query('SELECT * FROM product LEFT JOIN image ON product.id=image.product_id');
+        return $db->queryAll('SELECT * FROM product LEFT JOIN image ON product.id=image.product_id');
     }
 }

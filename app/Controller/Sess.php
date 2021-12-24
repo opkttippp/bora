@@ -8,7 +8,7 @@ class Sess
     {
         session_start();
 
-        if ($_SESSION['name']) {
+        if (isset($_SESSION['name'])) {
             Sess::val();
         }
     }

@@ -29,10 +29,10 @@ body{
 }
 .container-home{
     position:relative;
-    top: 200px;
+    top: 100px;
     width: 86%;
     margin-left: 14%;
-    min-height: 600px;
+    min-height: 850px;
     color: papayawhip;
 }
 .img-home{
@@ -174,10 +174,6 @@ input.button4:active {
     text-align: center;
     padding: 10px;
 }
-.container-basket{
-    position: relative;
-    top: 25%;
-}
 .footer{
     height: 45px;
     background: #343a40;
@@ -186,13 +182,41 @@ input.button4:active {
 }
 .order{
     position: relative;
-    top: 25%;
-    width: 48%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 50px;
 }
-.order img{
-    margin-right: 50px;
+.container-basket{
+    position: relative;
+    top: 25%;
+    height: 600px;
+}
+.container-basket img {
+    float: left;
+    margin-left: 60px;
+}
+.container-basket .img{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+.name{
+    float: left;
+    margin: 15px;
+    width: 300px;
+}
+.number{
+    float: left;
+    margin: 15px 5px;
+    width: 50px;
+}
+.number img{
+    float: left;
+    margin-left: 10px;
+}
+
+.price{
+    float: left;
+    width: 150px;
+    margin: 15px;
 }
 .cont_1{
     margin-left: 0;

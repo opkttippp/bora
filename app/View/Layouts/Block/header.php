@@ -17,6 +17,7 @@ if (isset($_SESSION['name'])) {
         rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
         crossorigin="anonymous">
   <!--  <script src="/../vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>-->
+  <script src="../style/script.js"></script>
 </head>
 <body>
 <div id="container">
@@ -32,35 +33,46 @@ if (isset($_SESSION['name'])) {
             <li>
               <a class="nav-link" href="/goods/show">Товары</a>
             </li>
-            <li>
-              <a class="nav-link" href="/cart/show">Корзина</a>
-            </li>
               <?php
-              if (empty($name)) {
-                  echo
-                  '<li>
+                if (empty($name)) :
+                    ?>
+                <li>
                   <a class="nav-link" href="/user/login">Log in</a>
                 </li>
-                  <li>
+                <li>
                   <a class="nav-link" href="/user/reg">Sign up</a>
-                </li>';
-              } else {
-                  echo "
+                </li>
+                    <?php
+                else :
+                    ?>
                 <li>
                   <a class='nav-link' href='/user/logout'>Выход</a>
                 </li>
-              <li>
-                <a class='nav-link' href='/user/index'>
-                <img src='/images/user.jpg' width='20' height='20' alt='user'>
-                </a>
-              </li>";
-              }
-              ?>
+                <li>
+                  <a class='nav-link' href='/user/index'>
+                    <img src='/images/user.jpg' width='20' height='20' alt='user'>
+                  </a>
+                </li>
+                    <?php
+                endif;
+                if (!empty($_SESSION['products'])) :
+                    ?>
+                <li>
+                  <a class='nav-link' href='/cart/show'><img src='/images/cart.jpg' width='25' height='25' alt='cart'>
+                      <?= $_SESSION['cartCount'] ?></a>
+                </li>
+                    <?php
+                endif;
+                ?>
           </ul>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search" id="search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
+
+          <div id="display"></div>
+
+
         </div>
       </div>
     </nav>
