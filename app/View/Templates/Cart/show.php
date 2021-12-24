@@ -1,25 +1,19 @@
 <div class="container-home">
-  <div class="container-basket"><img src="../images/basket.png" alt="корзина">
+  <div class="container-basket">
+      <?php
+      if (isset($_SESSION)) {
+          extract($_SESSION); ?>
+        <h3>Ваша корзина:</h3>
+        <hr>
+        <div class="order">
+          <img src="<?= $image_1 ?>" width="70" height="50" alt="ноутбук">
+          <div class="name"><?= $name ?> </div>
+          <div class="number"> 1 шт.</div>
+          <div class="price"> Цена: <?= $price ?></div>
+        </div>
+        <hr>
+          <?php
+      }
+      ?>
   </div>
 </div>
-<!---->
-<?php
-//foreach ($list as $val) {
-//    {
-//      if($val['id'] == 5){
-//        ?>
-<!--      <div class="order">-->
-<!--        <h3>Ваша корзина:</h3>-->
-<!--        <hr>-->
-<!--        <img style="margin-right: 50px;" src="--><?//= $val['image_1'] ?><!--" width="70" height="50" alt="ноутбук">-->
-<!--        <h5 style="display:inline-block;">--><?//= $val['name'] ?><!-- - 1 шт.</h5>-->
-<!--        <hr>-->
-<!--        <h5>Итого: --><?//= $val['price'] ?><!--</h5>-->
-<!---->
-<!--      </div>-->
-<!--    --><?php //}
-//}
-//}
-//echo '</div>';
-
-

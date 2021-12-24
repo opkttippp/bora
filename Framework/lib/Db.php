@@ -23,18 +23,33 @@ class Db
         }
     }
 
+
+
+
+
+    public function queryAll(string $sql, array $params = [], string $className = 'stdClass'): ?array
+    {
+        $sth = $this->treatment($sql, $params);
+        return $sth->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function query(string $sql, array $params = [], string $className = 'stdClass'): ?array
+    {
+        $sth = $this->treatment($sql, $params);
+        return $sth->fetch(PDO::FETCH_ASSOC);
+//        return $sth->fetchAll(\PDO::FETCH_CLASS, $className);
+    }
+
+    public function treatment($sql, $params)
     {
         $sth = $this->db->prepare($sql);
         foreach ($params as $key => $val) {
             $sth->bindValue(":$key", $val);
         }
-        $result = $sth->execute($params);
-
-        if (false === $result) {
-            return null;
+        if ($sth->execute($params)) {
+            return $sth;
+        } else {
+            return false;
         }
-        return $sth->fetchAll(PDO::FETCH_ASSOC);
-//        return $sth->fetchAll(\PDO::FETCH_CLASS, $className);
     }
 }
