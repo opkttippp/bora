@@ -12,12 +12,20 @@ if (isset($_SESSION['name'])) {
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?= $title ?></title>
   <link rel="icon" href="../images/logo_files/favic.ico" type="image/x-icon">
-  <link href="/style/style.css" rel="stylesheet" type="text/css">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+          crossorigin="anonymous"></script>
+
+  <!--  <script src="/../vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
         crossorigin="anonymous">
-  <!--  <script src="/../vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>-->
-  <script src="../style/script.js"></script>
+
+  <script src="/style/script.js"></script>
+  <link href="/style/style.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 <div id="container">
@@ -34,17 +42,17 @@ if (isset($_SESSION['name'])) {
               <a class="nav-link" href="/goods/show">Товары</a>
             </li>
               <?php
-                if (empty($name)) :
-                    ?>
+              if (empty($name)) :
+                  ?>
                 <li>
                   <a class="nav-link" href="/user/login">Log in</a>
                 </li>
                 <li>
                   <a class="nav-link" href="/user/reg">Sign up</a>
                 </li>
-                    <?php
-                else :
-                    ?>
+              <?php
+              else :
+                  ?>
                 <li>
                   <a class='nav-link' href='/user/logout'>Выход</a>
                 </li>
@@ -53,30 +61,33 @@ if (isset($_SESSION['name'])) {
                     <img src='/images/user.jpg' width='20' height='20' alt='user'>
                   </a>
                 </li>
-                    <?php
-                endif;
-                if (!empty($_SESSION['products'])) :
-                    ?>
+              <?php
+              endif;
+              if (!empty($_SESSION['products'])) :
+                  ?>
                 <li>
                   <a class='nav-link' href='/cart/show'><img src='/images/cart.jpg' width='25' height='25' alt='cart'>
                       <?= $_SESSION['cartCount'] ?></a>
                 </li>
-                    <?php
-                endif;
-                ?>
+              <?php
+              endif;
+              ?>
           </ul>
+          <div class="container-search">
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search" id="search">
+            <input class="form-control me-2" placeholder="Поиск" value="<?= $search ?? ''; ?>"
+                   onkeyup="checkEvent()" aria-label="Search" id="search" autocomplete="off">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
 
-          <div id="display"></div>
 
+          <ul class="results"></ul>
 
         </div>
-      </div>
+        </div>
     </nav>
   </header>
+
   <main>
     <div class="sidenav">
       <div class="side">

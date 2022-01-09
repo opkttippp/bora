@@ -1,32 +1,50 @@
-$(document).ready(function () {
-    $("#search").keyup(function () {
-        var name = $('#search').val();
-        if (name === "") {
-            $("#display").html("");
-        } else {
-            $.ajax({
-                type: "POST", // Указываем что будем обращатся к серверу через метод 'POST'
-                url: "handler.php", // Указываем путь к обработчику. То есть указывем куда будем отправлять данные на сервере.
-                data: {
-                    // В этом объекте, добавляем данные, которые хотим отправить на сервер
-                    search: name // Присваиваем значение переменной 'name', свойству 'search'.
-                },
-                success: function (response) {
-                    // Если ajax запрос выполнен успешно, то, добавляем результат внутри div, у которого id = 'display'.
-                    $("#display").html(response).show();
-                }
+async function checkEvent()
+{
+    let val = document.querySelector("#search").value;
+    if (val.length >= 3) {
+        const rawResponse = await fetch('/handler.php', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({val})
+        });
+        const content = await rawResponse.json();
+        let output = '';
+        for (const cont of content) {
+            let Html = '<li class="s">' + cont + '</li>';
+            output += Html;
+        }
+
+        document.querySelector('.results').innerHTML = output;
+        const d = document.querySelector('.results')
+
+        for (let i = 0; i < d.children.length; i++) {
+            d.children[i].addEventListener('click', event => {
+                addInSearch(event.target.innerText);
             });
         }
-    });
-});
+    } else {
+        document.querySelector('.results').innerHTML = '';
+    }
+}
 
-function fill(Value)
+
+function addInSearch(event)
 {
-    // Функция 'fill', является обработчиком события 'click'.
-    // Она вызывается, когда пользователь кликает по элементу из результата поиска.
-
-    $('#search').val(Value); // Берем значение элемента из результата поиска и добавляем его в значение поля поиска
-
-    $('#display').hide(); // Скрываем результаты поиска
+    console.log(document.querySelector('#search').value = event);
+    document.querySelector('.results').innerHTML = '';
 
 }
+
+document.onclick = function (event) {
+    document.querySelector('.results').innerHTML = '';
+}
+
+
+
+
+
+
+
