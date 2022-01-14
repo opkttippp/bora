@@ -81,7 +81,7 @@ if (isset($_SESSION['name'])) {
           </form>
 
 
-          <ul class="results"></ul>
+          <ul class="results me-2"></ul>
 
         </div>
         </div>

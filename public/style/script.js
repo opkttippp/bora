@@ -1,3 +1,5 @@
+// ----------------------живой поиск----------------------------
+
 async function checkEvent()
 {
     let val = document.querySelector("#search").value;
@@ -10,15 +12,17 @@ async function checkEvent()
             },
             body: JSON.stringify({val})
         });
-        const content = await rawResponse.json();
+
+        let content = await rawResponse.json();
         let output = '';
         for (const cont of content) {
-            let Html = '<li class="s">' + cont + '</li>';
+            console.log(cont);
+                let Html = '<li>' + cont + '</li>';
             output += Html;
         }
 
         document.querySelector('.results').innerHTML = output;
-        const d = document.querySelector('.results')
+        const d = document.querySelector('.results');
 
         for (let i = 0; i < d.children.length; i++) {
             d.children[i].addEventListener('click', event => {
@@ -26,25 +30,58 @@ async function checkEvent()
             });
         }
     } else {
-        document.querySelector('.results').innerHTML = '';
+        resultHide();
     }
 }
 
+function resultHide()
+{
+    document.querySelector('.results').innerHTML = '';
+}
 
 function addInSearch(event)
 {
-    console.log(document.querySelector('#search').value = event);
-    document.querySelector('.results').innerHTML = '';
+    document.querySelector('#search').value = event;
+    resultHide();
 
 }
 
 document.onclick = function (event) {
-    document.querySelector('.results').innerHTML = '';
+    resultHide();
 }
+//------------------------------------------------------------------
+// let counter = 0;
+// const buttonElement = document.getElementById('btn');
+// const buttonElement_2 = document.getElementById('btn-2');
+//
+// buttonElement.addEventListener('click', () => {
+//     counter += 1;
+//     document.getElementById('id').innerHTML = `Кол - во лайков = ${counter}`
+// });
+// buttonElement_2.addEventListener('click', () => {
+//     document.getElementById('id').innerHTML = `Ха-Ха-Ха`
+// });
 
-
-
-
-
-
-
+// data (){
+//     return{
+//         likes :0
+//     }
+// }
+// import { createApp } from "vue";
+// import store from "./store";
+// import "bootstrap/dist/js/bootstrap.bundle.min";
+// import "./style.css";
+//
+// import ProductsList from "./components/ProductsList";
+// import CartButton from "./components/CartButton";
+// import CartModal from "./components/cart/CartModal";
+//
+// const app = createApp({});
+//
+// app.use(store);
+//
+// app.component("products-list", ProductsList);
+// app.component("cart-button", CartButton);
+// app.component("cart-modal", CartModal);
+//
+// app.mount("#app");

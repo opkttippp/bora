@@ -218,8 +218,9 @@ input.button4:active {
 }
 
 .order {
-    position: relative;
     height: 50px;
+    width: 880px; !important;
+    /*border: red 2px solid;*/
 }
 
 .container-basket {
@@ -286,14 +287,12 @@ input.button4:active {
 
 .container-search {
     position: absolute;
-    /*margin-top: 10px;*/
-    margin-left: 600px;
+    margin-left: 70%;
 }
 
 .results {
     position: absolute;
     margin-left: -218px;
-    /*left: 700px;*/
 }
 
 .results li {
@@ -308,21 +307,5 @@ input.button4:active {
 .results li:hover {
     border: #0c9c0d 2px solid;
     cursor: pointer;
-
 }
-
-/*.results{*/
-/*    list-style: none;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    padding: 0;*/
-/*}*/
-/*li:hover {*/
-/*    background: yellow;*/
-/*}*/
-
-/*ul.drop.visible {*/
-/*    display:block;*/
-/*}*/
 
