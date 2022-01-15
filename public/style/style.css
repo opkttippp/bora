@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/fon_2.jpg");
+    background-image: url("../images/fon2.jpeg");
     background-color: #343a40;
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 .container-home {
-    position: relative;
+    position: absolute;
     top: 100px;
     width: 86%;
     margin-left: 14%;
@@ -72,6 +72,7 @@ body {
 
 .side {
     padding-top: 100px;
+    min-width: 100px;
 }
 
 .sidenav a {
@@ -205,7 +206,7 @@ input.button4:active {
     color: bisque;
 }
 
-.container h1 {
+#container h1 {
     text-align: center;
     padding: 10px;
 }
@@ -219,7 +220,7 @@ input.button4:active {
 
 .order {
     height: 50px;
-    width: 880px; !important;
+    width: 880px;
     /*border: red 2px solid;*/
 }
 
@@ -267,6 +268,7 @@ input.button4:active {
     margin-left: 0;
     width: 90%;
     height: 10%;
+    font-family: sans-serif;
 }
 
 .cont_2 {
@@ -308,4 +310,29 @@ input.button4:active {
     border: #0c9c0d 2px solid;
     cursor: pointer;
 }
+/*------------Card----------------*/
+@import "~bootstrap";
 
+body {
+    background-color: #edf2f9;
+}
+
+#cartModal .modal-dialog {
+    max-width: 60%;
+}
+
+.cart-table thead {
+    background-color: #edf2f9;
+}
+
+.cart-table th {
+    border-bottom: none;
+}
+
+.table.cart-table > :not(:last-child) > :last-child > * {
+    border-bottom-color: #dee2e6;
+}
+
+.table.cart-table tfoot td {
+    border-bottom: none;
+}
