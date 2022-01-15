@@ -26,5 +26,8 @@
       "App\\": "app/",
       "Framework\\": "Framework/"
     }
+  },
+  "require-dev": {
+    "codeception/codeception": "^2.0"
   }
 }

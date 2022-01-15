@@ -1,12 +1,12 @@
 <div class="container-home">
     <?php
     if (isset($list)) {
-        foreach ($list as $val) {
-            extract($val); ?>
+        foreach ($list as $key => $val) {
+            ?>
           <div class="container-list">
-            <p><?= $name ?></p>
-            <img src="<?= $image_1 ?>" width="200" height="150" alt="ноутбук">
-            <a href="/product/show/<?= $id ?>">
+            <p><?= $val->name; ?></p>
+            <img src="<?= $val->image_1 ?>" width="200" height="150" alt="ноутбук">
+            <a href="/product/show/<?= $val->id ?>">
               <p>подробнее о товаре</p>
             </a>
           </div>

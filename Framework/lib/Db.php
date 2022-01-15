@@ -29,21 +29,16 @@ class Db
         return $sth->fetchAll(PDO::FETCH_ASSOC);
     }
 
-
-
-
-
-    public function queryAll(string $sql, array $params = [], string $className = 'stdClass'): ?array
+    public function queryAll(string $sql, array $params = []): ?array
     {
         $sth = $this->treatment($sql, $params);
-        return $sth->fetchAll(PDO::FETCH_ASSOC);
+        return $sth->fetchAll(PDO::FETCH_CLASS);
     }
 
-    public function query(string $sql, array $params = [], string $className = 'stdClass'): ?array
+    public function query(string $sql, array $params = []): ?array
     {
         $sth = $this->treatment($sql, $params);
         return $sth->fetch(PDO::FETCH_ASSOC);
-//        return $sth->fetchAll(\PDO::FETCH_CLASS, $className);
     }
 
     public function treatment($sql, $params)

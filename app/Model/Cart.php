@@ -17,18 +17,6 @@ class Cart
         );
         return $result;
     }
-
-//    public function cartProductId($id)
-//    {
-//        $db = new Db();
-//        $params['id'] = $id;
-//
-//        $db->query(
-//            'INSERT INTO userCart (name, price, count ) (value1, value2, value3, ...);',
-//            $params
-//        );
-//    }
-
     public function addTocart($product_id, $coun = 1)
     {
         if (!empty($_SESSION['products'][$product_id])) {

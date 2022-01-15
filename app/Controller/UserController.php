@@ -16,9 +16,10 @@ class UserController extends Controller
 
     public function reg()
     {
-        if (!empty($_POST['login']) && !empty($_POST['surname']) && !empty($_POST['pass']) && !empty($_POST['email'])) {
-            $this->model->reg($_POST['login'], $_POST['surname'], $_POST['pass'], $_POST['email']);
+//        $phone = $_POST['phone'] ?? 'не указан';
 
+        if (!empty($_POST['login']) && !empty($_POST['surname']) && !empty($_POST['pass']) && !empty($_POST['email'])) {
+            $this->model->reg();
         }
         $this->view->render('reg');
     }

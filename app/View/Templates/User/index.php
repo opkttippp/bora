@@ -1,6 +1,7 @@
 <?php
 //if (isset($_SESSION['name'])) {
-//
+//echo "<pre>";
+//print_r($_SESSION);
 //}
 //?>
 <div class="container-home">
@@ -11,7 +12,7 @@
     <hr>
     <form action="/user/new" method="post" enctype="multipart/form-data" style="padding-bottom: 50px">
       <div class="mb-3">
-        <input type="file" name="attachment" value="Сhoose a picture">
+        <input type="file" name="attachment" accept=".jpg, .jpeg, .png">
       </div>
       <hr>
       <div class="mb-3">
