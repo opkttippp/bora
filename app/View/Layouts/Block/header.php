@@ -12,8 +12,6 @@ if (isset($_SESSION['name'])) {
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><?= $title ?></title>
   <link rel="icon" href="../images/logo_files/favic.ico" type="image/x-icon">
-
-
 </head>
 <body>
 <div id="container">
@@ -30,17 +28,17 @@ if (isset($_SESSION['name'])) {
               <a class="nav-link" href="/goods/show">Товары</a>
             </li>
               <?php
-              if (empty($name)) :
-                  ?>
+                if (empty($name)) :
+                    ?>
                 <li>
                   <a class="nav-link" href="/user/login">Log in</a>
                 </li>
                 <li>
                   <a class="nav-link" href="/user/reg">Sign up</a>
                 </li>
-              <?php
-              else :
-                  ?>
+                    <?php
+                else :
+                    ?>
                 <li>
                   <a class='nav-link' href='/user/logout'>Выход</a>
                 </li>
@@ -49,40 +47,56 @@ if (isset($_SESSION['name'])) {
                     <img src='/images/user.jpg' width='20' height='20' alt='user'>
                   </a>
                 </li>
-              <?php
-              endif;
-//              if (!empty($_SESSION['products'])) :
-                  ?>
-                <li>
-<!--                  <a class='nav-link' href='/cart/show'><img src='/images/cart.jpg' width='25' height='25' alt='cart'>-->
-<!--                      --><?//= $_SESSION['cartCount'] ?><!--</a>-->
-
-                  <div class="navbar-nav" style="color:white">
-                    <cart-button></cart-button>
-                  </div>
-
-                </li>
-<!--              --><?php
-//              endif;
-//              ?>
+                    <?php
+                endif;
+                ?>
+            <li>
+              <div class="navbar-nav" style="color:white">
+                <cart-button></cart-button>
+              </div>
+            </li>
           </ul>
           <div class="container-search">
-          <form action="/product/show" class="d-flex" method="post">
-            <input class="form-control me-2" placeholder="Поиск" value=""
-                   onkeyup="checkEvent()" aria-label="Search" id="search" name='search' autocomplete="off">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-
-
-          <ul class="results me-2"></ul>
-
-        </div>
+            <form action="/product/show" class="d-flex" method="post">
+              <input class="form-control me-2" placeholder="Поиск" value=""
+                     onkeyup="checkEvent()" aria-label="Search" id="search" name='search' autocomplete="off">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <ul class="results me-2"></ul>
+          </div>
         </div>
     </nav>
   </header>
-
   <main>
     <div class="sidenav">
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+           data-bs-toggle="dropdown" aria-expanded="false">
+          Категория
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <li><a class="dropdown-item" href="/goods/show/notebook">notebook</a></li>
+          <li><a class="dropdown-item" href="/goods/show/tablet">tablet</a></li>
+        </ul>
+      </div>
+        <?php
+        if (!empty($list)) {
+            ?>
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              фильтр
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="/goods/show/cheap">От дешевых к дорогим</a></li>
+              <li><a class="dropdown-item" href="/goods/show/expen">От дорогих к дешевым</a></li>
+              <li><a class="dropdown-item" href="/goods/show/down">от А до Я</a></li>
+              <li><a class="dropdown-item" href="/goods/show/up">от Я до А</a></li>
+            </ul>
+          </div>
+            <?php
+        }
+        ?>
       <div class="side">
         <a href="https://www.pc-school.ru/kratkaya-istoriya-noutbukov/?utm_referrer=https%3A%2F%2Fwww.google.com%2F">
           About</a>
@@ -98,20 +112,19 @@ if (isset($_SESSION['name'])) {
       </div>
     </div>
     <script>
-//---------------живой поиск--------------------------
-        async function checkEvent()
-        {
+        //---------------живой поиск--------------------------
+        async function checkEvent() {
             let val = document.querySelector("#search").value;
             if (val.length >= 3) {
                 const rawResponse = await fetch('/api/product/search.php',
                     {
-                    method: 'POST',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({val})
-                });
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({val})
+                    });
 
                 let content = await rawResponse.json();
                 let output = '';
@@ -132,13 +145,11 @@ if (isset($_SESSION['name'])) {
             }
         }
 
-        function resultHide()
-        {
+        function resultHide() {
             document.querySelector('.results').innerHTML = '';
         }
 
-        function addInSearch(event)
-        {
+        function addInSearch(event) {
             document.querySelector('#search').value = event;
             resultHide();
 
@@ -147,7 +158,6 @@ if (isset($_SESSION['name'])) {
         document.onclick = function (event) {
             resultHide();
         }
-
     </script>
 
 

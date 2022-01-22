@@ -1,9 +1,3 @@
-<?php
-//if (isset($_SESSION['name'])) {
-//echo "<pre>";
-//print_r($_SESSION);
-//}
-//?>
 <div class="container-home">
   <div class="login">
     <div class="d-flex flex-column align-items-center text-center">
@@ -22,6 +16,14 @@
       <div class="mb-3">
         <label class="form-label" for="surname">Surname</label>
         <input type="text" class="form-control" name="surname" placeholder="<?php echo $_SESSION['surname']; ?>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="phone_1">Phone-1</label>
+        <input type="text" class="form-control" name="phone_1" placeholder="<?php echo $_SESSION['phone_1']; ?>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="phone_2">Phone-2</label>
+        <input type="text" class="form-control" name="phone_2" placeholder="<?php echo $_SESSION['phone_2']; ?>">
       </div>
       <div class="mb-3">
         <label class="form-label" for="pass">Password</label>

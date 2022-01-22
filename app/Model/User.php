@@ -10,17 +10,30 @@ class User
     public function log($login, $password)
     {
         $db = new Db();
-        $sql = "SELECT * FROM users WHERE name = :login";
+        $sql = "SELECT *  FROM users INNER JOIN phone ON users.id = phone.users_id WHERE name = :login";
         $stat = $db->db->prepare($sql);
         $stat->bindValue(":login", $login);
         $stat->execute();
-        $query = $stat->fetch(PDO::FETCH_ASSOC);
-        if ((password_verify($password, $query['pass']))) {
-            $this->sess($query);
+        $query = $stat->fetchAll(PDO::FETCH_ASSOC);
+        if ((password_verify($password, $query[0]['pass']))) {
+            $res = $this->listPhone($query);
+            $this->sess($res);
+            $this->sess($query[0]);
             header("Location:/user/index");
         } else {
             return false;
         }
+    }
+
+    public function listPhone($result)
+    {
+        $phone = [];
+        $n = 1;
+        foreach ($result as $val) {
+            $phone ["phone_$n"] = $val['phone'];
+            $n++;
+        }
+        return $phone;
     }
 
     public function reg(): bool
@@ -68,6 +81,7 @@ class User
     public function sess($query)
     {
         foreach ($query as $key => $val) {
+            $this->sess($key);
             $_SESSION[$key] = $val;
         }
     }

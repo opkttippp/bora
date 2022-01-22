@@ -1,6 +1,7 @@
 import {createApp} from "vue";
 import store from "./store";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import "./style.css";
 
 import ProductsList from "../components/ProductsList";
