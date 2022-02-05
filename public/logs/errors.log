@@ -1,4 +1,49 @@
-{"message":"Error!","context":{},"level":400,"level_name":"ERROR","channel":"my_Logger","datetime":"2021-12-15T13:06:31.054089+02:00","extra":{"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}}
-{"message":"Error!","context":{},"level":400,"level_name":"ERROR","channel":"my_Logger","datetime":"2021-12-15T13:12:15.824218+02:00","extra":{"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}}
-{"message":"Error!","context":{},"level":400,"level_name":"ERROR","channel":"my_Logger","datetime":"2021-12-15T13:12:20.769798+02:00","extra":{"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}}
-{"message":"Error!","context":{},"level":400,"level_name":"ERROR","channel":"my_Logger","datetime":"2021-12-15T13:12:20.954113+02:00","extra":{"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}}
+[2022-01-07T11:08:26.333938+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":"http://mysite/cart/show"}
+[2022-01-07T11:09:51.286918+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T11:10:18.459360+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T11:10:40.896444+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T11:11:36.724770+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:00:59.599191+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:04:40.995755+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:13:02.001906+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:13:41.365573+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:14:21.958989+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:15:14.176639+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:15:31.443009+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:16:30.988936+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:49:02.692350+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:50:26.247179+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:50:30.910455+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:50:53.164031+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:51:48.542806+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:55:17.159784+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T12:55:25.516283+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T13:15:43.533965+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T13:15:46.985176+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T13:15:49.628173+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T13:16:29.951683+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T13:17:19.097337+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T13:17:30.854335+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T13:36:39.909767+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-07T13:37:03.836646+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/user/login","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:28:38.301083+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:29:49.406806+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:34:48.564934+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:39:15.718323+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:45:49.720067+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:47:09.173058+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:48:06.412038+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:48:29.164376+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:49:27.320253+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:51:11.780960+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:52:30.203870+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:52:51.556416+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:53:58.586120+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:54:57.011295+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:56:20.337861+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:56:44.426694+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T22:57:26.027562+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T23:06:53.063771+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T23:07:07.184089+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T23:08:42.131996+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}
+[2022-01-09T23:15:03.871680+02:00] my_Logger.DEBUG: logger is ready [] {"memory_usage":"2 MB","url":"/home/index","ip":"127.0.0.1","http_method":"GET","server":"mysite","referrer":null}

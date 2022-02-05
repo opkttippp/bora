@@ -2,16 +2,15 @@
 
 namespace App\Model;
 
-use App\lib\Db;
+use Framework\lib\Db;
 use PDO;
 
 class Goods
 {
+
     public function getProduct()
     {
         $db = new Db();
-
-        $res = $db->db->query('SELECT * FROM product LEFT JOIN image ON product.id=image.product_id');
-        return $res->fetchAll(PDO::FETCH_ASSOC);
+        return $db->queryAll('SELECT * FROM product LEFT JOIN image ON product.id=image.product_id');
     }
 }

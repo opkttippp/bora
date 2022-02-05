@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core;
+namespace Framework\Core;
 
 class View
 {
@@ -24,10 +24,12 @@ class View
         }
     }
 
-    public static function errorCode($code)
+    public static function errorCode($err)
     {
-        http_response_code($code);
-        require 'app/views/errors/' . $code . '.php';
+        ob_start();
+        $error = $err;
+        require '../app/View/Templates/Error/errors.php';
+        ob_end_flush();
         exit();
     }
 }

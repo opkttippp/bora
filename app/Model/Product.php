@@ -2,18 +2,20 @@
 
 namespace App\Model;
 
+use Framework\lib\Db;
+use PDO;
+
 class Product
 {
-    public function getProductId($get)
+
+    public function getProductId($id)
     {
-        include_once "../src/model/list.php";
-        if (isset($list)) {
-            foreach ($list as $value) {
-                if ($value['id'] == $get) {
-                    return $value;
-                }
-            }
-        }
-        return 'Error';
+        $db = new Db();
+        $params['id'] = $id;
+
+        return $db->query(
+            'SELECT * FROM product LEFT JOIN image ON product.id=image.product_id WHERE id = :id',
+            $params
+        );
     }
 }
